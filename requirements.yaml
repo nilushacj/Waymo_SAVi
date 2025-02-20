@@ -1,0 +1,53 @@
+name: multi-gpu-slot
+channels:
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.10.5
+  - cuda-compiler>=11.2,<11.5
+  - cuda-libraries>=11.2,<11.5
+  - cuda-libraries-dev>=11.2,<11.5
+  - cuda-toolkit>=11.2,<11.5
+  - cuda-cccl>=11.2,<11.5
+  - cuda-command-line-tools>=11.2,<11.5
+  - cuda-compiler>=11.2,<11.5
+  - cuda-cudart>=11.2,<11.5
+  - cuda-cuobjdump>=11.2,<11.5
+  - cuda-cupti>=11.2,<11.5
+  - cuda-cuxxfilt>=11.2,<11.5
+  - cuda-gdb>=11.2,<11.5
+  - cuda-libraries>=11.2,<11.5
+  - cuda-libraries-dev>=11.2,<11.5
+  - cuda-nsight>=11.2,<11.5
+  - cuda-nsight-compute>=11.2,<11.5
+  - cuda-nvcc>=11.2,<11.5
+  - cuda-nvdisasm>=11.2,<11.5
+  - cuda-nvml-dev>=11.2,<11.5
+  - cuda-nvprof>=11.2,<11.5
+  - cuda-nvprune>=11.2,<11.5
+  - cuda-nvrtc>=11.2,<11.5
+  - cuda-nvrtc-dev>=11.2,<11.5
+  - cuda-nvtx>=11.2,<11.5
+  - cuda-sanitizer-api>=11.2,<11.5
+  - cudnn=8.2
+  - gcc=11
+  - gxx=11
+  - pip
+  - pip:
+    - -f https://storage.googleapis.com/jax-releases/jax_cuda_releases.html
+    - jax[cuda11_cudnn82]==0.3.2
+    - absl-py>=0.12.0
+    - numpy>=1.21.5,<2
+    - tensorflow-cpu>=2.7.0  # Using tensorflow-cpu to have all GPU memory for JAX.
+    - tensorflow-datasets>=4.4.0 # Needs newer tensorflow-datasets 
+    - matplotlib>=3.5.0
+    - clu==0.0.7 # Needs 0.0.4 for deterministic_data
+    - flax==0.3.5
+    - chex==0.0.7
+    - optax==0.1.0
+    - ml-collections==0.1.0
+    - scikit-image
+    - scipy>=1.9,<1.10
+    - gsutil # For data downloading
+
+
