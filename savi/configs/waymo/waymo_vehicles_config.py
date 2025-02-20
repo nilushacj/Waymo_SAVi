@@ -169,14 +169,14 @@ def get_config():
         "corrector_attn": 16,
     }
     
-    config.learning_rate = 1e-4 #2e-4
-    config.warmup_steps = 200
+    config.learning_rate = 2e-4
+    config.warmup_steps = 2500
     config.num_train_steps = 500000
 
     config.max_grad_norm = 0.05 #originally missed
     config.log_loss_every_steps = 50 #originally missed
-    config.eval_every_steps = 100 #1000 #originally missed
-    config.checkpoint_every_steps = 1000 #5000 #originally missed
+    config.eval_every_steps = 1000 #1000 #originally missed
+    config.checkpoint_every_steps = 1000#5000 #originally missed
 
     config.train_metrics_spec = {
       "loss": "loss",
